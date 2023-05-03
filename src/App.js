@@ -1,17 +1,16 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 
-import WheelOfMeals from "./components/Pages/WheelOfMeals";
-import FindARestaurant from "./components/Pages/FindARestaurant";
-import Header from "./components/UI/Header";
+import WheelOfMeals from './components/Pages/WheelOfMeals';
+import FindARestaurant from './components/Pages/FindARestaurant';
+import Header from './components/UI/Header';
 
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <Routes>
-        <Route path="/" element={ <WheelOfMeals /> } />
-        <Route path="/wheel-of-meals" element={<WheelOfMeals />} />
-        <Route path="/find-a-restaurant" element={<FindARestaurant />} />
+        <Route path='/' element={<WheelOfMeals />} />
+        <Route path='/find-a-restaurant' element={<FindARestaurant />} />
       </Routes>
     </>
   );

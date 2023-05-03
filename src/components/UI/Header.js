@@ -4,13 +4,13 @@ import classes from "./Header.module.css";
 const Header = () => {
   return (
     <div className={classes.header}>
-      <NavLink className={classes.logo} to="/wheel-of-meals">
+      <NavLink className={classes.logo} to="/">
         lucky<span>bite</span>
       </NavLink>
       <nav className={classes["links-group"]}>
         <NavLink
           className={({ isActive }) => (isActive ? `${classes.selected}` : "")}
-          to="/wheel-of-meals"
+          to="/"
         >
           Wheel of Meals
         </NavLink>
