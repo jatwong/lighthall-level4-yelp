@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@600&display=swap');
+
+.card {
+    display: flex;
+    background-color: white;
+    font: 600 1em Rosario, sans-serif;
+    width: 40vw;
+    height: 170px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.cardImg {
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    min-width: 45%;
+}

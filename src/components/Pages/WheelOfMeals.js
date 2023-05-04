@@ -1,9 +1,12 @@
+import classes from './WheelOfMeals.module.css';
+import RestaurantList from "./RestaurantList";
+
 const WheelOfMeals = () => {
-    return (
-        <div>
-            Wheel of Meals
-        </div>
-    )
+  return (
+    <div className={classes.page}>
+      <RestaurantList />
+    </div>
+  );
 };
 
 export default WheelOfMeals;
