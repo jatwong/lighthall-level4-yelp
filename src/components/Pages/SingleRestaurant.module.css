@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showMore {
+    font: 400 italic 1em Rosario, sans-serif;
+    color: #E36631;
+    margin: 2rem 0;
+    text-decoration: none;
+}
+
+.showMore:hover {
+    font: 600 italic 1em Rosario, sans-serif;
+    color: #C21414;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 85%;
+    height: 60vh;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    font: 400 1em Rosario, sans-serif;
+    margin: 2rem;
+}
+
+.name {
+    margin: 0;
+    font: 600 1.5em Rosario, sans-serif;
+}
+
+.cardImg {
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+    object-fit: cover;
+}

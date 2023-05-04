@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@600&display=swap');
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #C21414;
+    border-bottom: 1px solid #C21414;
+    align-self: center;
+    width: 100%;
+}
+
+.title h2 {
+    font: 600 2em Rosario, sans-serif;
+    color: #E36631;
+    margin: 2rem 0;
+}

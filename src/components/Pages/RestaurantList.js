@@ -1,12 +1,10 @@
 import classes from './RestaurantList.module.css';
 import RestaurantItemCard from '../UI/RestaurantItemCard';
+import SectionWrapper from '../UI/SectionWrapper';
 
 const RestaurantList = () => {
   return (
-    <div className={classes.page}>
-      <div className={classes.title}>
-        <h2>option 2 Restaurants</h2>
-      </div>
+    <SectionWrapper title='option 2 Restaurants'>
       <div className={classes.sort}>
         <p>Sort by</p>
         <div>
@@ -20,10 +18,9 @@ const RestaurantList = () => {
           <RestaurantItemCard />
           <RestaurantItemCard />
           <RestaurantItemCard />
-
         </div>
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

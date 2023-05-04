@@ -5,16 +5,16 @@ import Rating from './Rating';
 
 const RestaurantItemCard = () => {
   return (
-    <div>
+    <>
       <div className={classes.card}>
         <img className={classes.cardImg} src={fillerImg} alt='filler meal' />
         <div className={classes.details}>
-          <div className={classes.name}>Restaurant Name</div>
+          <p className={classes.name}>Restaurant Name</p>
           <Rating />
-          <div>Restaurant details</div>
+          <p>Restaurant details</p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

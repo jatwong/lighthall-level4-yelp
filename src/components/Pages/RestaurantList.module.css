@@ -1,29 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rosario:wght@400;600&display=swap');
 
-.page {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-}
-
 .container {
     display: flex;
     justify-content: center;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid #C21414;
-    border-bottom: 1px solid #C21414;
-    align-self: center;
-    width: 100%;
-}
-
-.title h2 {
-    font: 600 2em Rosario, sans-serif;
-    color: #E36631;
-    margin: 2rem 0;
 }
 
 .sort {
@@ -33,7 +12,6 @@
     color: #E36631;
     margin: 1rem 0;
 }
-
 
 .sort button {
     font: 400 1rem Rosario, sans-serif;
