@@ -4,7 +4,7 @@
     display: flex;
     background-color: white;
     width: 40vw;
-    height: 170px;
+    height: 230px;
 }
 
 .details {
@@ -12,6 +12,17 @@
     flex-direction: column;
     font: 400 1em Rosario, sans-serif;
     margin: 1rem;
+
+}
+
+.details p {
+    margin: 0;
+}
+
+.url {
+    color: #E36631;
+    margin-top: 15px;
+    text-underline-offset: 3px;
 }
 
 .name {

@@ -1,17 +1,18 @@
 import classes from './RestaurantItemCard.module.css';
 
-import fillerImg from '../imgs/marissa-grootes-u2Lp8tXIcjw-unsplash.jpg';
 import Rating from './Rating';
 
-const RestaurantItemCard = () => {
+const RestaurantItemCard = (props) => {
   return (
     <>
       <div className={classes.card}>
-        <img className={classes.cardImg} src={fillerImg} alt='filler meal' />
+        <img className={classes.cardImg} src={props.image} alt='filler meal' />
         <div className={classes.details}>
-          <p className={classes.name}>Restaurant Name</p>
-          <Rating />
-          <p>Restaurant details</p>
+          <p className={classes.name}>{props.name}</p>
+          <Rating rating={props.rating}/>
+          <p>{props.price}</p>
+          <p>{props.phone}</p>
+          <a className={classes.url} href={props.url}>{props.name}'s Website</a>
         </div>
       </div>
     </>

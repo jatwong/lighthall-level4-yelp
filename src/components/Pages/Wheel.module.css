@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@400;700&display=swap');
+
+:root {
+    --random-number: 0deg;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    background: #C21414;
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.container .wheel {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #FFF5E0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #333,
+        0 0 0 20px #E36631,
+        0 0 0 23px #333;
+}
+
+.wheel div {
+    font: 400 1.5em Rosario, sans-serif;
+    position: absolute;
+    transform-origin: bottom;
+    height: 50%;
+    width: 50%;
+    clip-path: polygon(50% 100%, 6% 0, 94% 0);
+    padding-top: 15%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wheel span {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.wheel .one {
+    background-color: #f9804d;
+}
+
+.wheel .two {
+    background-color: #facc91;
+    transform: rotate(45deg);
+}
+
+.wheel .three {
+    background-color: #f9804d;
+    transform: rotate(90deg);
+}
+
+.wheel .four {
+    background-color: #facc91;
+    transform: rotate(135deg);
+}
+
+.wheel .five {
+    background-color: #f9804d;
+    transform: rotate(180deg);
+}
+
+.wheel .six {
+    background-color: #facc91;
+    transform: rotate(225deg);
+}
+
+.wheel .seven {
+    background-color: #f9804d;
+    transform: rotate(270deg);
+}
+
+.wheel .eight {
+    background-color: #facc91;
+    transform: rotate(315deg);
+}
+
+.spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 1.5em Rosario, sans-serif;
+    color: #FFF5E0;
+    background-color: #E36631;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    height: 40px;
+}
+
+.spin:hover {
+    cursor: pointer;
+}
+
+.spin:disabled {
+    background-color: #9c6750;
+}
+
+.start-rotate {
+    animation: start-rotate 1s linear infinite;
+}
+
+@keyframes start-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stop-rotate {
+    to {
+        animation-timing-function: ease-out;
+        transform: rotate(var(--random-number, 0deg));
+    }
+}
+
+.stop-rotate {
+    animation: stop-rotate 3s forwards;
+}

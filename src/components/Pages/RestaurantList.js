@@ -1,10 +1,11 @@
 import classes from './RestaurantList.module.css';
+
 import RestaurantItemCard from '../UI/RestaurantItemCard';
 import SectionWrapper from '../UI/SectionWrapper';
 
-const RestaurantList = () => {
+const RestaurantList = (props) => {
   return (
-    <SectionWrapper title='option 2 Restaurants'>
+    <SectionWrapper title={`${props.cuisine} Restaurants`}>
       <div className={classes.sort}>
         <p>Sort by</p>
         <div>
@@ -14,10 +15,17 @@ const RestaurantList = () => {
       </div>
       <div className={classes.container}>
         <div className={classes.list}>
-          {/* map restaurant items here */}
-          <RestaurantItemCard />
-          <RestaurantItemCard />
-          <RestaurantItemCard />
+          {props.data.map((restaurant) => (
+            <RestaurantItemCard
+              key={restaurant.id}
+              name={restaurant.name}
+              price={restaurant.price}
+              phone={restaurant.display_phone}
+              rating={restaurant.rating}
+              image={restaurant.image_url}
+              url={restaurant.url}
+            />
+          ))}
         </div>
       </div>
     </SectionWrapper>

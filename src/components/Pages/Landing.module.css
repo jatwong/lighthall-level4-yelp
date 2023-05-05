@@ -1,49 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;1,700&display=swap');
 
-.page {
+.greeting {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    row-gap: 10px;
+}
+
+.greeting p {
+    font: 400 25px Rosario, sans-serif;
+    color: #E36631;
+    margin: 0;
+}
+
+.greeting p span {
+    font: 700 italic 1em Rosario, sans-serif;
+    color: #C21414;
 }
 
 .form {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 600px;
     margin-top: 20px;
+    row-gap: 20px;
 }
 
-.form input {
+.form select {
     text-align: center;
-    height: 30px;
-    width: 200px;
+    height: 35px;
+    width: 180px;
     margin: 0 7px;
     border: 1px solid black;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
-.form button {
+.button {
     text-align: center;
     color: #FFF5E0;
     border-radius: 8px;
     background-color: #E36631;
     border: none;
-    width:130px;
+    width: 100px;
     height: 35px;
+    margin: 3rem;
 }
 
-.form button:hover {
+.button:hover {
     cursor: pointer;
-}
-
-.text {
-    color: #E36631;
-    font: 400 25px Rosario, sans-serif;
-    margin: 0;
-}
-
-.text span {
-    color: #C21414;
-    font: 700 italic Rosario, sans-serif;
 }
