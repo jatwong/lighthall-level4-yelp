@@ -53,3 +53,8 @@
 .button:hover {
     cursor: pointer;
 }
+
+.button:disabled {
+    cursor: default;
+    background-color: #9c6750;
+}

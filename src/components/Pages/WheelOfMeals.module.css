@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@1,400;1,700&display=swap');
 
 .page {
     display: flex;
@@ -37,6 +37,11 @@
     cursor: pointer;
 }
 
+.form button:disabled {
+    cursor: default;
+    background-color: #9c6750;
+}
+
 .text {
     color: #E36631;
     font: 400 25px Rosario, sans-serif;
@@ -46,4 +51,11 @@
 .text span {
     color: #C21414;
     font: 700 italic Rosario, sans-serif;
+}
+
+.loading {
+    color: #E36631;
+    font: 400 italic 20px Rosario, sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
 }

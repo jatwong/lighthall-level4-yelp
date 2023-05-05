@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import classes from './WheelOfMeals.module.css';
 
@@ -8,9 +8,13 @@ import RestaurantList from './RestaurantList';
 
 const WheelOfMeals = () => {
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   const [isSearching, setIsSearching] = useState(false);
+
   const [isClicked, setIsClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const [country, setCountry] = useState('');
   const [zipcode, setZipcode] = useState('');
   const [cuisine, setCuisine] = useState('');
@@ -23,7 +27,14 @@ const WheelOfMeals = () => {
     setZipcode(e.target.value);
   };
 
+  let formIsValid = false;
+  if (country !== '' && zipcode !== '') {
+    formIsValid = true;
+  }
+
   const onSubmit = (e) => {
+    setIsLoading(true);
+
     e.preventDefault();
     fetch(
       `https://couplesyelp.jayraval20.repl.co/top-cuisine-restaurants/${zipcode}/${country}/${cuisine}`,
@@ -35,17 +46,26 @@ const WheelOfMeals = () => {
       }
     )
       .then((res) => {
-        return res.json();
+        if (res.status === 500) {
+          throw new Error("Couldn't retrieve data");
+        } else {
+          return res.json();
+        }
       })
       .then((response) => {
         setData(response);
+        setIsLoading(false);
         setIsSearching(true);
+      })
+      .catch(() => {
+        navigate('/not-found');
       });
   };
 
   let page;
   let content = (
     <>
+      {isLoading && <p className={classes.loading}>Looking for restaurants</p>}
       <p className={classes.text}>
         Looks like your next meal is <span>{cuisine}</span>!
       </p>
@@ -65,7 +85,9 @@ const WheelOfMeals = () => {
             onChange={zipcodeHandler}
           />
         </div>
-        <button onClick={onSubmit}>View restaurants</button>
+        <button onClick={onSubmit} disabled={!formIsValid}>
+          View restaurants
+        </button>
       </form>
     </>
   );

@@ -113,6 +113,7 @@
 }
 
 .spin:disabled {
+    cursor: default;
     background-color: #9c6750;
 }
 

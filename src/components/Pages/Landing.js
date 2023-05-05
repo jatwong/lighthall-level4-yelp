@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import classes from './Landing.module.css';
 import { useNavigate } from 'react-router-dom';
+
+import classes from './Landing.module.css';
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -17,6 +18,12 @@ const Landing = () => {
   };
 
   let options = [optOne, optTwo];
+
+  let formIsValid = false;
+  if (optOne !== '' && optTwo !== '') {
+    formIsValid = true;
+  }
+
   const onSubmit = () => {
     navigate('/wheel-of-meals', { state: { options: options } });
   };
@@ -37,11 +44,11 @@ const Landing = () => {
           <option>Chinese</option>
           <option>Filipino</option>
           <option>Greek</option>
-          <option>Indian</option>
           <option>Italian</option>
           <option>Japanese</option>
           <option>Korean</option>
           <option>Mediterranean</option>
+          <option>Thai</option>
           <option>Turkish</option>
           <option>Vietnamese</option>
         </select>
@@ -53,17 +60,17 @@ const Landing = () => {
           <option>Chinese</option>
           <option>Filipino</option>
           <option>Greek</option>
-          <option>Indian</option>
           <option>Italian</option>
           <option>Japanese</option>
           <option>Korean</option>
           <option>Mediterranean</option>
+          <option>Thai</option>
           <option>Turkish</option>
           <option>Vietnamese</option>
         </select>
       </form>
 
-      <button className={classes.button} onClick={onSubmit}>
+      <button className={classes.button} onClick={onSubmit} disabled={!formIsValid}>
         Submit
       </button>
     </>

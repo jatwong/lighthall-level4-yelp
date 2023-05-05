@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;1,700&display=swap');
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 700 italic 1em Rosario, sans-serif;
+    color: #C21414;
+}
+
+.error a {
+    font: 400 1em Rosario, sans-serif;
+    color: #E36631;
+    text-decoration: none;
+    margin: 1rem 0;
+}
