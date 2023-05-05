@@ -3,32 +3,7 @@
 .container {
     display: flex;
     justify-content: center;
-}
-
-.sort {
-    display: flex;
-    align-items: center;
-    font: 400 1.5em Rosario, sans-serif;
-    color: #E36631;
-    margin: 1rem 0;
-}
-
-.sort button {
-    font: 400 1rem Rosario, sans-serif;
-    padding: 8px;
-    width: 6rem;
-    color: #E36631;
-    background-color: transparent;
-    border: 1px solid #E36631 ;
-    border-radius: 20px;
-    margin: 0 1rem;
-    box-sizing: border-box;
-}
-
-.sort button:hover {
-    cursor: pointer;
-    font: 600 1rem Rosario, sans-serif;
-    border: 2px solid #E36631;
+    margin: 2rem 0;
 }
 
 .list {

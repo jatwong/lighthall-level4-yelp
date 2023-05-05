@@ -6,13 +6,6 @@ import SectionWrapper from '../UI/SectionWrapper';
 const RestaurantList = (props) => {
   return (
     <SectionWrapper title={`${props.cuisine} Restaurants`}>
-      <div className={classes.sort}>
-        <p>Sort by</p>
-        <div>
-          <button>Rating</button>
-          <button>Reviews</button>
-        </div>
-      </div>
       <div className={classes.container}>
         <div className={classes.list}>
           {props.data.map((restaurant) => (

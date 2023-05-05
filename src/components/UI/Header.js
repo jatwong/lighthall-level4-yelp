@@ -7,20 +7,6 @@ const Header = () => {
       <NavLink className={classes.logo} to='/'>
         lucky<span>bite</span>
       </NavLink>
-      <nav className={classes['links-group']}>
-        <NavLink
-          className={({ isActive }) => (isActive ? `${classes.selected}` : '')}
-        >
-          Wheel of Meals
-        </NavLink>
-
-        <NavLink
-          className={({ isActive }) => (isActive ? `${classes.selected}` : '')}
-          to='/find-a-restaurant'
-        >
-          Find a restaurant
-        </NavLink>
-      </nav>
     </div>
   );
 };

@@ -15,7 +15,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/wheel-of-meals' element={<WheelOfMeals />} />
-          <Route path='/find-a-restaurant' element={<FindARestaurant />} />
         </Routes>
       </div>
     </>

@@ -42,7 +42,7 @@ const Wheel = (props) => {
       const degree = Math.ceil(Math.random() * 360);
       // TODO: Make it work the way Justina wants it to work (after the project deadline)
       //   console.log(degree)
-      console.log(convertDegreeToPieChart(degree));
+      // console.log(convertDegreeToPieChart(degree));
       setRandomNumber(degree);
 
       let option;
@@ -52,10 +52,10 @@ const Wheel = (props) => {
         option = props.options[0];
       }
 
-      setIsSpinning(false);
       props.setCuisine(option);
 
-      setTimeout(function() {
+      setTimeout(() => {
+        setIsSpinning(false);
         props.setIsClicked(true);
       }, 1000);
     }, 2500); // 2.5s spin

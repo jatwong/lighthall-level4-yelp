@@ -12,7 +12,7 @@ const RestaurantItemCard = (props) => {
           <Rating rating={props.rating}/>
           <p>{props.price}</p>
           <p>{props.phone}</p>
-          <a className={classes.url} href={props.url}>{props.name}'s Website</a>
+          <a className={classes.url} href={props.url}>{props.name}'s Yelp</a>
         </div>
       </div>
     </>
