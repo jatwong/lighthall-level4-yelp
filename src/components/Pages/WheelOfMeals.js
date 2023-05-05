@@ -83,14 +83,14 @@ const WheelOfMeals = () => {
             onChange={countryHandler}
           /> */}
           <select onChange={onSelectCode}>
-            <option>US</option>
-            <option>CA</option>
-            <option>KR</option>
-            <option>JP</option>
-            <option>CH</option>
-            <option>IT</option>
-            <option>CN</option>
-            <option>TW</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="KR">Korea</option>
+            <option value="JP">Japan</option>
+            <option value="AU">Australia</option>
+            <option value="MX">Mexico</option>
+            <option value="FR">France</option>
+            <option value="CN">China</option>
           </select>
           <input
             placeholder='----Enter zipcode----'
