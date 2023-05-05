@@ -23,6 +23,15 @@
     border-radius: 8px;
 }
 
+.form select {
+    text-align: center;
+    height: 35px;
+    width: 200px;
+    margin: 0 7px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
 .form button {
     text-align: center;
     color: #FFF5E0;

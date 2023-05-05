@@ -15,14 +15,19 @@ const WheelOfMeals = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const [country, setCountry] = useState('');
+  const [country, setCountry] = useState('US');
   const [zipcode, setZipcode] = useState('');
   const [cuisine, setCuisine] = useState('');
   const [data, setData] = useState([]);
 
-  const countryHandler = (e) => {
+  // const countryHandler = (e) => {
+  //   // url encode country before setting
+  //   setCountry(e.target.value);
+  // };
+  const onSelectCode = (e) => {
     setCountry(e.target.value);
   };
+
   const zipcodeHandler = (e) => {
     setZipcode(e.target.value);
   };
@@ -71,12 +76,22 @@ const WheelOfMeals = () => {
       </p>
       <form className={classes.form}>
         <div>
-          <input
-            placeholder='----Enter country----'
+          {/* <input
+            placeholder='----Enter country e.g. "us" or "jp" ----'
             type='text'
             value={country}
             onChange={countryHandler}
-          />
+          /> */}
+          <select onChange={onSelectCode}>
+            <option>US</option>
+            <option>CA</option>
+            <option>KR</option>
+            <option>JP</option>
+            <option>CH</option>
+            <option>IT</option>
+            <option>CN</option>
+            <option>TW</option>
+          </select>
           <input
             placeholder='----Enter zipcode----'
             type='text'
